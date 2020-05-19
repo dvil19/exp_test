@@ -4,6 +4,7 @@ resource "aws_instance" "exp_test_ec2" {
 
   subnet_id = "${aws_subnet.exp_test_subnet_pub.id}"
   security_groups = ["${aws_security_group.webservers.id}"]
+  key_name = "exp_key"
 
   credit_specification {
     cpu_credits = "unlimited"
