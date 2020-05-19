@@ -6,7 +6,7 @@
     "builders": [
         {
             "access_key": "{{user `aws_access_key`}}",
-            "ami_name": "Tomcat8_ubuntu1604_AMI",
+            "ami_name": "Tomcat8_ubuntu1804_AMI",
             "instance_type": "t3.micro",
             "region": "us-east-1",
             "secret_key": "{{user `aws_secret_key`}}",
@@ -32,7 +32,10 @@
                 "sudo apt-get update",
                 "sudo apt-get install -y openjdk-8-jdk",
                 "java -version",
-                "sudo apt-get install -y tomcat8"
+                "sudo apt-get install -y tomcat8",
+		"sudo apt-get install -y apache2",
+		"sudo apt-get install -y php libapache2-mod-php php-mysql",
+		"sudo systemctl restart apache2"
             ]
         }
     ]
