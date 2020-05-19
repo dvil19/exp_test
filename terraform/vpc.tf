@@ -20,6 +20,16 @@ resource "aws_subnet" "exp_test_subnet_priv" {
   }
 }
 
+resource "aws_subnet" "exp_test_subnet_priv2" {
+  vpc_id            = "${aws_vpc.exp_test_vpc.id}"
+  cidr_block        = "172.16.11.0/24"
+  availability_zone = "us-east-1b"
+
+  tags = {
+    Name = "tf-exp-test-subnet-priv"
+  }
+}
+
 resource "aws_network_interface" "exp_test_vni" {
   subnet_id   = "${aws_subnet.exp_test_subnet_priv.id}"
   private_ips = ["172.16.10.100"]
