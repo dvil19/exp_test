@@ -8,7 +8,6 @@ resource "aws_security_group" "webservers" {
     to_port     = 8080
     security_groups = ["${aws_security_group.load_balancer.id}"]
     protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
   }
 
   egress {
@@ -50,7 +49,6 @@ resource "aws_security_group" "rds_database" {
     to_port     = 3306
     security_groups = ["${aws_security_group.webservers.id}"]
     protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
   }
 
   egress {
