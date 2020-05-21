@@ -1,5 +1,3 @@
-# Interview Exam
-
 ## Improvements that could be made with more time/resources
 
 - Fully automate the github webhook trigger, i.e. pull request builds the solution and the approval deploys it
