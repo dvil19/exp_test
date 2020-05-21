@@ -1,7 +1,5 @@
 # Interview Exam
 
-Proposed solution by Daniel Villanea
-
 ## Improvements that could be made with more time/resources
 
 - Fully automate the github webhook trigger, i.e. pull request builds the solution and the approval deploys it
@@ -22,6 +20,3 @@ Proposed solution by Daniel Villanea
 - Encrypt secrets using sops or any other encryption tool for credentials
 - Use variables in terraform for the different environments/values (like CIDR blocks, subnets, etc)
 
-## Author
-
-* **Daniel Villanea** - *Initial work* 
